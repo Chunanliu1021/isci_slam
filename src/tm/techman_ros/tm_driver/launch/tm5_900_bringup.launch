@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!--
+  Techman robot tm5_900 launch.
+  Usage:
+    tm5_900_bringup.launch robot_ip:=<value>
+-->
+<launch>
+
+  <arg name="model" />
+  <arg name="stl_mesh" default="false" />
+  <!-- <param name="robot_description" command="xacro '$(find tm5_description)/urdf/tm5_900_robot.urdf.xacro' stl_mesh:=$(arg stl_mesh)"/> -->
+  <!-- <param name="robot_description" command="xacro '$(find tm_description)/xacro/tm5-900.urdf.xacro' "/> -->
+
+  <!-- launch robot state publisher -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+  <node name="tm_state_publisher" pkg="tm_driver" type="tm_state_publisher" />
+
+  <!-- launch tm_camera tf -->
+  <!-- <node pkg="tf" type="static_transform_publisher" name="camera_tf" args="-0.00006286 0.0719933 0.0376066 0.00055 -0.000125 -0.00095 /tool0 /eye_link 100" /> -->
+
+  <!-- robot_ip: IP-address of the robot's socket-messaging server -->
+  <arg name="prefix" default="" />
+  <arg name="robot_ip"  default="192.168.10.2"/>
+  <arg name="min_payload" default="0.0" />
+  <arg name="max_payload" default="4.0" />
+
+  <!-- robot model -->
+  <!--
+  <include file="$(find tm5_description)/launch/tm5_900_upload.launch">
+  </include>
+  -->
+
+  <!-- tm common -->
+  <include file="$(find tm_driver)/launch/tm_common.launch">
+    <arg name="prefix"  value="$(arg prefix)" />
+    <arg name="robot_ip" value="$(arg robot_ip)" />
+    <arg name="min_payload" value="$(arg min_payload)" />
+    <arg name="max_payload" value="$(arg max_payload)" />
+  </include>
+
+  <!-- Visualize gripper -->
+  <!-- <node pkg="tf" type="static_transform_publisher" name="gper"  args=" 0 0 0.222 0 0 0 1 /flange_link /gripper 100" />
+  <node pkg="tf" type="static_transform_publisher" name="gper_visual"  args=" 0 0 -0.222 0 0 0 1 /gripper /gper_visual 100" /> -->
+  <!-- <node pkg="tf" type="static_transform_publisher" name="gper_visual"  args=" 0 0 -0.22 0 0 0 1 /gripper_link /gper_visual 100" /> -->
+  
+  <!-- old -->
+  <!-- <node pkg="tf" type="static_transform_publisher" name="flan2Cam"  args=" 0.0023327169702640066 0.12699328520288136 0.07268286030073234 -0.47650023175709477 -0.48558501535813137 -0.503731879609714 0.5323616397336898 /flange_link /camera_base 100" /> -->
+  <!-- 0611 -->
+  <!-- <node pkg="tf" type="static_transform_publisher" name="flan2Cam"  args=" 0.005044718618960993 0.1287501233940474 0.053045037222264314 -0.46657446191343327 -0.4851586062737281 -0.5059651633570459 0.5393780230207765 /flange_link /camera_base 100" /> -->
+  <!-- 0613 -->
+  <!-- <node pkg="tf" type="static_transform_publisher" name="flan2Cam"  args=" 0.0017834126052420369 0.1360984510110224 0.06491189790965575 -0.49644577205588375 -0.4960501864963298 -0.5055337048516272 0.5019078412854115 /flange_link /camera_base 100" /> -->
+  <!-- <node pkg="tf" type="static_transform_publisher" name="flan2Cam"  args=" -0.008668 0.15199328520288136 0.07268286030073234 -0.47650023175709477 -0.48558501535813137 -0.503731879609714 0.5323616397336898 /flange_link /camera_base 100" /> -->
+  <!-- <node pkg="tf" type="static_transform_publisher" name="flan2Cam"  args=" -0.002668 0.16599328520288136 0.07268286030073234 -0.47650023175709477 -0.48558501535813137 -0.503731879609714 0.5323616397336898 /flange_link /camera_base 100" /> -->
+  <!-- <node pkg="tf" type="static_transform_publisher" name="flan2Cam"  args=" 0.0074551 0.1466 0.057654 0.49528 0.50268 0.50407 -0.49792 /tool0 /camera_base 100" /> -->
+
+  <!-- <node pkg="tf" type="static_transform_publisher" name="tool02Cam"  args="-0.00623549566695874437 0.14941215388963854 0.05961087242911679 -0.4976347570176995 -0.5014797154560687 -0.5017517550955758 0.4991221492305714 /tool0 /camera_base 100" /> -->
+  
+  <!-- <node name="TMrviz" pkg="rviz" type="rviz" args="-d tm.rviz" required = "true" /> -->
+  <!-- <node name="robotfinger2" pkg="robotiq_2f_gripper_control" type="Robotiq2FGripperRtuNode.py" args="/dev/ttyUSB1" required = "true" /> -->
+
+</launch>

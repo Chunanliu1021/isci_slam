@@ -1,0 +1,2 @@
+mobile/rosserial/rosserial
+/home/caliiu/ws_hdl_slam/devel/.private/rosserial/cmake.lock /home/caliiu/ws_hdl_slam/devel/./cmake.lock

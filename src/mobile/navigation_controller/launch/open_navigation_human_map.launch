@@ -1,0 +1,20 @@
+<!--html-->
+
+<launch>
+
+  <!-- basic control-->
+  <include file="$(find robot_basic)/launch/robot_basic_all.launch" />
+
+  <!--navigation controller-->
+  <node name="calculat_navigation_cmd" pkg="navigation_controller"  type="navigation_controller_human" output="screen">
+  	<param name="AvoidSwitch" value="true" />   
+	<!--<remap from="cmd_vel" to="raw_cmd_vel"/>-->
+  </node>
+<!--
+  <node name="guide_control" pkg="guide_control"  type="guide_control_gui" output="screen">
+  </node>
+-->
+  <!-- read file.txt for pos command-->
+  <!--<node name="send_navigation_cmd" pkg="navigation_controller" type="command_pub_srv_gui" output="screen"/>-->
+  <node name="send_navigation_cmd" pkg="navigation_controller" type="L1_controller_v2_new" output="screen"/>
+</launch>

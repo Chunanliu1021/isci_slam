@@ -1,0 +1,108 @@
+<!--html-->
+
+<launch>
+
+  <arg name="use_rviz" default="false" />
+
+  <!--node name="keyboard_node" pkg="robot_basic"  type="serial_dsp_keyboard" >
+  </node-->
+
+  <node name="keyboard_node" pkg="robot_basic"  type="serial_dsp_keyboard" />
+
+  <node name="iii_driver_node" pkg="serial_iii_driver"  type="serial_driver_node_multi_0828" output="screen">
+    	<!--<param name="Lport" type="string" value="/dev/ttyUSB0" />-->
+	<param name="Rport" type="string" value="/dev/ttyUSB0" />
+    	<param name="baudrate" type="int" value="115200" />
+  </node>
+
+  <node name="hokuyo" pkg="hokuyo_node" type="hokuyo_node" respawn="false" output="screen">
+  
+    <!-- Starts up faster, but timestamps will be inaccurate. --> 
+    <param name="calibrate_time" type="bool" value="false"/> 
+    
+    <!-- Set the port to connect to here -->
+    <param name="port" type="string" value="/dev/ttyACM0"/> 
+  
+    <param name="intensity" type="bool" value="false"/>
+  </node>
+
+<!-- 
+  <node name="sick_tim571_2050001" pkg="sick_tim" type="sick_tim551_2050001" output="screen">
+        <param name="range_max" type="double" value="25.0" />
+	<param name="hostname" type="string" value="192.168.0.1" />
+        <param name="port" type="string" value="2112" />
+        <param name="timelimit" type="int" value="5" />
+  	<remap from="scan" to="scan" />
+  </node>
+-->
+  <!-- TF setting -->
+  <node pkg="tf" type="static_transform_publisher" name="base_footprint2base_link" args="0 0 0.22 0 0 0 /base_footprint /base_link 50"/>
+  <node pkg="tf" type="static_transform_publisher" name="base_link2laser_link" args="0.4 0 0.0 0 0 0 /base_link /laser 50"/>
+
+
+  <node pkg="map_server" type="map_server" name="map_server" args="$(find robot_basic)/map/map.yaml">
+	<param name="frame_id" value="map" />
+</node>
+
+  <param name="robot_description"
+    textfile="$(find robot_basic)/urdf/cowalk.urdf" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher"  type="robot_state_publisher"/>
+  
+
+  <!-- amcl node -->
+  <node pkg="amcl" type="amcl" name="amcl" output="screen">
+    <remap from="scan" to="scan"/>
+    <!-- Publish scans from best pose at a max of 10 Hz -->
+    <param name="use_map_topic" value="true"/>
+    <param name="odom_model_type" value="diff"/>
+    <param name="transform_tolerance" value="0.2" />
+    <param name="gui_publish_rate" value="8.0"/>
+    <param name="laser_max_beams" value="500"/>
+    <param name="min_particles" value="500"/>
+    <param name="max_particles" value="5000"/>
+    <param name="kld_err" value="0.1"/>
+    <param name="kld_z" value="0.99"/>
+    <param name="odom_alpha1" value="0.05"/>
+    <param name="odom_alpha2" value="0.05"/>
+    <!-- translation std dev, m -->
+    <param name="odom_alpha3" value="0.05"/>
+    <param name="odom_alpha4" value="0.05"/>
+    <param name="laser_z_hit" value="0.9"/>
+    <param name="laser_z_short" value="0.05"/>
+    <param name="laser_z_max" value="0.05"/>
+    <param name="laser_z_rand" value="0.5"/>
+    <param name="laser_sigma_hit" value="0.2"/>
+    <param name="laser_lambda_short" value="0.1"/>
+    <param name="laser_lambda_short" value="0.1"/>
+    <param name="laser_model_type" value="likelihood_field"/>
+    <!-- <param name="laser_model_type" value="beam"/> -->
+    <param name="laser_min_range" value="0.1"/>
+    <param name="laser_max_range" value="5.0"/>
+    <param name="laser_likelihood_max_dist" value="2.0"/>
+    <param name="update_min_d" value="0.2"/>
+    <param name="update_min_a" value="0.2"/>
+    <param name="resample_interval" value="1"/>
+    <param name="transform_tolerance" value="0.1"/>
+    <param name="recovery_alpha_slow" value="0.001"/>
+    <param name="recovery_alpha_fast" value="0.1"/>
+
+    <param name="odom_frame_id" value="/odom"/>
+    <param name="global_frame_id" value="/map"/>
+    <param name="base_frame_id" value="/base_link"/>
+
+    <param name="initial_pose_x" value="4.0"/> 
+    <param name="initial_pose_y" value="-0.4"/>
+    <param name="initial_pose_a" value="3.14"/>     
+
+  </node>
+
+  
+
+  <node name="tf_world_to_map" pkg="tf" type="static_transform_publisher"
+      args="0 0 0 0 0 0 /world /map 50" />
+
+  <node name="rviz" pkg="rviz" type="rviz" if="$(arg use_rviz)" required="$(arg use_rviz)" 
+	args="-d $(find robot_basic)/configuration_files/robot_basic.rviz" />
+
+</launch>
+

@@ -1,0 +1,7 @@
+mobile/rosserial/rosserial_chibios
+/home/caliiu/ws_hdl_slam/devel/.private/rosserial_chibios/cmake.lock /home/caliiu/ws_hdl_slam/devel/./cmake.lock
+/home/caliiu/ws_hdl_slam/devel/.private/rosserial_chibios/share/rosserial_chibios/make_libraries.py /home/caliiu/ws_hdl_slam/devel/share/rosserial_chibios/make_libraries.py
+/home/caliiu/ws_hdl_slam/devel/.private/rosserial_chibios/share/rosserial_chibios/cmake.lock /home/caliiu/ws_hdl_slam/devel/share/rosserial_chibios/cmake.lock
+/home/caliiu/ws_hdl_slam/devel/.private/rosserial_chibios/share/rosserial_chibios/cmake/rosserial_chibiosConfig-version.cmake /home/caliiu/ws_hdl_slam/devel/share/rosserial_chibios/cmake/rosserial_chibiosConfig-version.cmake
+/home/caliiu/ws_hdl_slam/devel/.private/rosserial_chibios/share/rosserial_chibios/cmake/rosserial_chibiosConfig.cmake /home/caliiu/ws_hdl_slam/devel/share/rosserial_chibios/cmake/rosserial_chibiosConfig.cmake
+/home/caliiu/ws_hdl_slam/devel/.private/rosserial_chibios/lib/pkgconfig/rosserial_chibios.pc /home/caliiu/ws_hdl_slam/devel/lib/pkgconfig/rosserial_chibios.pc

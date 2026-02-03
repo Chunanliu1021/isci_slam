@@ -1,0 +1,37 @@
+<!--html-->
+
+<robot name="agv_robot">
+  <material name="orange">
+    <color rgba="1.0 0.5 0.2 1" />
+  </material>
+  <material name="gray">
+    <color rgba="0.2 0.2 0.2 1" />
+  </material>
+
+  <link name="/laser">
+    <visual>
+      <origin xyz="0 0 0" />
+      <geometry>
+        <cylinder length="0.05" radius="0.03" />
+      </geometry>
+      <material name="gray" />
+    </visual>
+  </link>
+
+  <link name="/base_link">
+    <visual>
+      <origin xyz="0 0 0" />
+      <geometry>
+        <cylinder length="1.6" radius="0.4" />
+      </geometry>
+      <material name="red" />
+    </visual>
+  </link>
+
+  <joint name="base_link_to_laser_joint" type="fixed">
+    <parent link="/base_link" />
+    <child link="/laser" />
+    <origin xyz="0.4 0.0 0.0" />
+  </joint>
+
+</robot>

@@ -1,0 +1,7 @@
+image:  /home/yu/Documents/mobile/src/robot_basic/map/map_rvo.pgm
+resolution: 0.200000
+origin: [-12.533085, -16.069968, 0.000000]
+negate: 0
+occupied_thresh: 0.3
+free_thresh: 0.196
+

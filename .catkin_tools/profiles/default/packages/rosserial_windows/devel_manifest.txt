@@ -1,0 +1,7 @@
+mobile/rosserial/rosserial_windows
+/home/caliiu/ws_hdl_slam/devel/.private/rosserial_windows/cmake.lock /home/caliiu/ws_hdl_slam/devel/./cmake.lock
+/home/caliiu/ws_hdl_slam/devel/.private/rosserial_windows/share/rosserial_windows/cmake/rosserial_windowsConfig-version.cmake /home/caliiu/ws_hdl_slam/devel/share/rosserial_windows/cmake/rosserial_windowsConfig-version.cmake
+/home/caliiu/ws_hdl_slam/devel/.private/rosserial_windows/share/rosserial_windows/cmake/rosserial_windowsConfig.cmake /home/caliiu/ws_hdl_slam/devel/share/rosserial_windows/cmake/rosserial_windowsConfig.cmake
+/home/caliiu/ws_hdl_slam/devel/.private/rosserial_windows/lib/pkgconfig/rosserial_windows.pc /home/caliiu/ws_hdl_slam/devel/lib/pkgconfig/rosserial_windows.pc
+/home/caliiu/ws_hdl_slam/devel/.private/rosserial_windows/lib/rosserial_windows/make_libraries.py /home/caliiu/ws_hdl_slam/devel/lib/rosserial_windows/make_libraries.py
+/home/caliiu/ws_hdl_slam/devel/.private/rosserial_windows/lib/rosserial_windows/cmake.lock /home/caliiu/ws_hdl_slam/devel/lib/rosserial_windows/cmake.lock

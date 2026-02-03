@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+
+  <include file="$(find kinects_human_tracking)/launch/kinect_merge.launch"/>
+  <include file="$(find kinects_human_tracking)/launch/closest_pt_tracking.launch"/>
+  
+  <!-- <node pkg="tf" type="static_transform_publisher" name="baseLink2velodyne"  args=" /link_chises /camera_base 100" /> -->
+  <!-- <node pkg="tf" type="static_transform_publisher" name="base_2_velodyne" args="0.42 0.00 0.75 0 0 0 1 base_link velodyne  20" /> -->
+
+</launch>

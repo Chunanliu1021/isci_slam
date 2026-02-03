@@ -1,0 +1,42 @@
+joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+
+arm_controller:
+    type: velocity_controllers/JointGroupVelocityController
+    joints:
+      - shoulder_1_joint
+      - shoulder_2_joint
+      - elbow_joint
+      - wrist_1_joint
+      - wrist_2_joint
+      - wrist_3_joint
+#     constraints:
+#       goal_time: 0.6
+#       stopped_velocity_tolerance: 0.05
+#       hip: {trajectory: 0.1, goal: 0.1}
+#       shoulder: {trajectory: 0.1, goal: 0.1}
+#       elbow: {trajectory: 0.1, goal: 0.1}
+#       wrist: {trajectory: 0.1, goal: 0.1}
+#     stop_trajectory_duration: 0.5
+#     state_publish_rate:  25
+#     action_monitor_rate: 10
+# /gazebo_ros_control:
+#     pid_gains:
+#         #!!These values have not been optimized!!
+#         shoulder_1_joint: {p: 100.0, i: 10.0, d: 0.0}
+#         shoulder_2_joint: {p: 100.0, i: 10.0, d: 0.0}
+#         elbow_joint: {p: 100.0, i: 10.0, d: 0.0}
+#         wrist_1_joint: {p: 100.0, i: 10.0, d: 0.0}
+#         wrist_2_joint: {p: 100.0, i: 10.0, d: 0.0}
+#         wrist_3_joint: {p: 1000.0, i: 10.0, d: 0.0}
+
+#         joint_left_wheel : {p: 20.0, i: 5.0, d: 0.0, i_clamp: 1.0}
+#         joint_right_wheel: {p: 20.0, i: 5.0, d: 0.0, i_clamp: 1.0}
+
+/gazebo_ros_control:
+    pid_gains:
+        joint_left_wheel : {p: 20.0, i: 5.0, d: 0.0, i_clamp: 1.0}
+        joint_right_wheel: {p: 20.0, i: 5.0, d: 0.0, i_clamp: 1.0}
+

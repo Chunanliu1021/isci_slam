@@ -1,0 +1,8 @@
+mobile/robot_basic
+/home/caliiu/ws_hdl_slam/devel/.private/robot_basic/cmake.lock /home/caliiu/ws_hdl_slam/devel/./cmake.lock
+/home/caliiu/ws_hdl_slam/devel/.private/robot_basic/share/robot_basic/cmake/robot_basicConfig.cmake /home/caliiu/ws_hdl_slam/devel/share/robot_basic/cmake/robot_basicConfig.cmake
+/home/caliiu/ws_hdl_slam/devel/.private/robot_basic/share/robot_basic/cmake/robot_basicConfig-version.cmake /home/caliiu/ws_hdl_slam/devel/share/robot_basic/cmake/robot_basicConfig-version.cmake
+/home/caliiu/ws_hdl_slam/devel/.private/robot_basic/lib/pkgconfig/robot_basic.pc /home/caliiu/ws_hdl_slam/devel/lib/pkgconfig/robot_basic.pc
+/home/caliiu/ws_hdl_slam/devel/.private/robot_basic/lib/robot_basic/serial_dsp_node /home/caliiu/ws_hdl_slam/devel/lib/robot_basic/serial_dsp_node
+/home/caliiu/ws_hdl_slam/devel/.private/robot_basic/lib/robot_basic/serial_pwm_node /home/caliiu/ws_hdl_slam/devel/lib/robot_basic/serial_pwm_node
+/home/caliiu/ws_hdl_slam/devel/.private/robot_basic/lib/robot_basic/serial_dsp_keyboard /home/caliiu/ws_hdl_slam/devel/lib/robot_basic/serial_dsp_keyboard

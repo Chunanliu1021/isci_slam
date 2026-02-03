@@ -1,0 +1,53 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"link_chassis" [label="link_chassis"];
+"caster_back" [label="caster_back"];
+"caster_front" [label="caster_front"];
+"link_left_wheel" [label="link_left_wheel"];
+"link_right_wheel" [label="link_right_wheel"];
+"mid_mount" [label="mid_mount"];
+"base" [label="base"];
+"link_0" [label="link_0"];
+"link_1" [label="link_1"];
+"link_2" [label="link_2"];
+"link_3" [label="link_3"];
+"link_4" [label="link_4"];
+"link_5" [label="link_5"];
+"link_6" [label="link_6"];
+"flange_link" [label="flange_link"];
+"tool0" [label="tool0"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "base_link_joint" [label="xyz: 0 0 0.51 \nrpy: 0 -0 0"]
+"base_link_joint" -> "link_chassis"
+"link_chassis" -> "bottom2caster_back_joint" [label="xyz: -0.3 0 -0.43 \nrpy: 0 -0 0"]
+"bottom2caster_back_joint" -> "caster_back"
+"link_chassis" -> "bottom2caster_front_joint" [label="xyz: 0.3 0 -0.43 \nrpy: 0 -0 0"]
+"bottom2caster_front_joint" -> "caster_front"
+"link_chassis" -> "joint_left_wheel" [label="xyz: 0 -0.25 -0.43 \nrpy: 0 -0 0"]
+"joint_left_wheel" -> "link_left_wheel"
+"link_chassis" -> "joint_right_wheel" [label="xyz: 0 0.25 -0.43 \nrpy: 0 -0 0"]
+"joint_right_wheel" -> "link_right_wheel"
+"link_chassis" -> "mid_mount_joint" [label="xyz: -0.2 0 0.34 \nrpy: 0 -0 0"]
+"mid_mount_joint" -> "mid_mount"
+"mid_mount" -> "arm_mount_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"arm_mount_joint" -> "base"
+"base" -> "base_fixed_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"base_fixed_joint" -> "link_0"
+"link_0" -> "shoulder_1_joint" [label="xyz: 0 0 0.1452 \nrpy: 0 -0 0"]
+"shoulder_1_joint" -> "link_1"
+"link_1" -> "shoulder_2_joint" [label="xyz: 0 0 0 \nrpy: 0 -1.5708 -1.5708"]
+"shoulder_2_joint" -> "link_2"
+"link_2" -> "elbow_joint" [label="xyz: 0.429 0 0 \nrpy: 0 -0 0"]
+"elbow_joint" -> "link_3"
+"link_3" -> "wrist_1_joint" [label="xyz: 0.4115 0 -0.1223 \nrpy: 0 -0 1.5708"]
+"wrist_1_joint" -> "link_4"
+"link_4" -> "wrist_2_joint" [label="xyz: 0 -0.106 0 \nrpy: 1.5708 -0 0"]
+"wrist_2_joint" -> "link_5"
+"link_5" -> "wrist_3_joint" [label="xyz: 0 -0.11315 0 \nrpy: 1.5708 -0 0"]
+"wrist_3_joint" -> "link_6"
+"link_6" -> "flange_fixed_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"flange_fixed_joint" -> "flange_link"
+"flange_link" -> "flange_link-tool0" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"flange_link-tool0" -> "tool0"
+}

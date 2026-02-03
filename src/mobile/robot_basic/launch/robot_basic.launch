@@ -1,0 +1,15 @@
+<!--html-->
+
+<launch>
+
+
+  <node name="keyboard_node" pkg="robot_basic"  type="serial_dsp_keyboard" >
+  </node>
+
+  <node name="driver_node" pkg="robot_basic"  type="serial_driver_node" output="screen">
+        <param name="Lport" type="string" value="/dev/ttyUSB0" />
+    	<param name="baudrate" type="int" value="115200" />
+  </node>
+  
+</launch>
+

@@ -1,0 +1,7 @@
+image:  /home/yu/Documents/mobile/src/robot_basic/map/map_nav.pgm
+resolution: 0.050000
+origin: [-12.533085, -16.069968, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+

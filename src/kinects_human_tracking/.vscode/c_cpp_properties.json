@@ -1,0 +1,59 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/caliiu/ws_hdl_slam/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/opt/openrobots/include/**",
+        "/home/caliiu/ws_hdl_slam/src/eigen_checks/include/**",
+        "/home/caliiu/ws_hdl_slam/src/isci_robot/include/**",
+        "/home/caliiu/ws_hdl_slam/src/kindr/include/**",
+        "/home/caliiu/ws_hdl_slam/src/kindr_ros/kindr_ros/include/**",
+        "/home/caliiu/ws_hdl_slam/src/kindr_ros/kindr_rviz_plugins/include/**",
+        "/home/caliiu/ws_hdl_slam/src/kinects_human_tracking/include/**",
+        "/home/caliiu/ws_hdl_slam/src/minkindr/minkindr/include/**",
+        "/home/caliiu/ws_hdl_slam/src/minkindr_ros/minkindr_conversions/include/**",
+        "/home/caliiu/ws_hdl_slam/src/kindr_ros/multi_dof_joint_trajectory_rviz_plugins/include/**",
+        "/home/caliiu/ws_hdl_slam/src/numpy_eigen/include/**",
+        "/home/caliiu/ws_hdl_slam/src/ocs2/ocs2_robotic_examples/ocs2_ballbot_example/include/**",
+        "/home/caliiu/ws_hdl_slam/src/ocs2/ocs2_robotic_examples/ocs2_ballbot_raisim_example/include/**",
+        "/home/caliiu/ws_hdl_slam/src/ocs2/ocs2_robotic_examples/ocs2_cart_pole_example/include/**",
+        "/home/caliiu/ws_hdl_slam/src/ocs2/ocs2_robotic_examples/ocs2_cart_pole_raisim_example/include/**",
+        "/home/caliiu/ws_hdl_slam/src/ocs2/ocs2_comm_interfaces/include/**",
+        "/home/caliiu/ws_hdl_slam/src/ocs2/ocs2_core/include/**",
+        "/home/caliiu/ws_hdl_slam/src/ocs2/ocs2_ddp/include/**",
+        "/home/caliiu/ws_hdl_slam/src/ocs2/ocs2_robotic_examples/ocs2_double_integrator_example/include/**",
+        "/home/caliiu/ws_hdl_slam/src/ocs2/ocs2_frank_wolfe/include/**",
+        "/home/caliiu/ws_hdl_slam/src/ocs2/ocs2_mpc/include/**",
+        "/home/caliiu/ws_hdl_slam/src/ocs2/ocs2_oc/include/**",
+        "/home/caliiu/ws_hdl_slam/src/ocs2/ocs2_ocs2/include/**",
+        "/home/caliiu/ws_hdl_slam/src/ocs2/ocs2_test_tools/ocs2_qp_solver/include/**",
+        "/home/caliiu/ws_hdl_slam/src/ocs2/ocs2_robotic_examples/ocs2_quadrotor_example/include/**",
+        "/home/caliiu/ws_hdl_slam/src/ocs2/ocs2_raisim/include/**",
+        "/home/caliiu/ws_hdl_slam/src/ocs2/ocs2_raisim_ros/include/**",
+        "/home/caliiu/ws_hdl_slam/src/ocs2/ocs2_robotic_examples/ocs2_robotic_tools/include/**",
+        "/home/caliiu/ws_hdl_slam/src/ocs2/ocs2_thirdparty/include/**",
+        "/home/caliiu/ws_hdl_slam/src/perceptive_mpc/include/**",
+        "/home/caliiu/ws_hdl_slam/src/record/include/**",
+        "/home/caliiu/ws_hdl_slam/src/sim_obs/include/**",
+        "/home/caliiu/ws_hdl_slam/src/tm/tm_driver/include/**",
+        "/home/caliiu/ws_hdl_slam/src/urdf2robcogen/include/**",
+        "/home/caliiu/ws_hdl_slam/src/velodyne_simulator/velodyne_gazebo_plugins/include/**",
+        "/home/caliiu/ws_hdl_slam/src/voxblox/voxblox/include/**",
+        "/home/caliiu/ws_hdl_slam/src/voxblox/voxblox_ros/include/**",
+        "/home/caliiu/ws_hdl_slam/src/voxblox/voxblox_rviz_plugin/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

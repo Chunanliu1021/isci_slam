@@ -1,0 +1,7 @@
+mobile/serial
+/home/caliiu/ws_hdl_slam/devel/.private/serial/cmake.lock /home/caliiu/ws_hdl_slam/devel/./cmake.lock
+/home/caliiu/ws_hdl_slam/devel/.private/serial/share/serial/cmake/serialConfig.cmake /home/caliiu/ws_hdl_slam/devel/share/serial/cmake/serialConfig.cmake
+/home/caliiu/ws_hdl_slam/devel/.private/serial/share/serial/cmake/serialConfig-version.cmake /home/caliiu/ws_hdl_slam/devel/share/serial/cmake/serialConfig-version.cmake
+/home/caliiu/ws_hdl_slam/devel/.private/serial/lib/libserial.so /home/caliiu/ws_hdl_slam/devel/lib/libserial.so
+/home/caliiu/ws_hdl_slam/devel/.private/serial/lib/serial/serial_example /home/caliiu/ws_hdl_slam/devel/lib/serial/serial_example
+/home/caliiu/ws_hdl_slam/devel/.private/serial/lib/pkgconfig/serial.pc /home/caliiu/ws_hdl_slam/devel/lib/pkgconfig/serial.pc

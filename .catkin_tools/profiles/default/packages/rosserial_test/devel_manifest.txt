@@ -1,0 +1,5 @@
+mobile/rosserial/rosserial_test
+/home/caliiu/ws_hdl_slam/devel/.private/rosserial_test/cmake.lock /home/caliiu/ws_hdl_slam/devel/./cmake.lock
+/home/caliiu/ws_hdl_slam/devel/.private/rosserial_test/share/rosserial_test/cmake/rosserial_testConfig-version.cmake /home/caliiu/ws_hdl_slam/devel/share/rosserial_test/cmake/rosserial_testConfig-version.cmake
+/home/caliiu/ws_hdl_slam/devel/.private/rosserial_test/share/rosserial_test/cmake/rosserial_testConfig.cmake /home/caliiu/ws_hdl_slam/devel/share/rosserial_test/cmake/rosserial_testConfig.cmake
+/home/caliiu/ws_hdl_slam/devel/.private/rosserial_test/lib/pkgconfig/rosserial_test.pc /home/caliiu/ws_hdl_slam/devel/lib/pkgconfig/rosserial_test.pc
